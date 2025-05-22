@@ -1,4 +1,5 @@
 import React from "react";
+import { useTheme } from "styled-components";
 import styled from "styled-components/native";
 
 export const ChatScroll = () => {
@@ -45,9 +46,8 @@ export const ChatScroll = () => {
 };
 
 const ChatList = styled.ScrollView`
-  margin-bottom: 0px;
-  width: 100%;
   background-color: ${(props) => props.theme.background};
+  width: 100%;
 `;
 
 const ChatCard = styled.View`

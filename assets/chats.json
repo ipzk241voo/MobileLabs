@@ -2,7 +2,7 @@
     {
         "name": "ndpower",
         "online": "green",
-        "avatar": "https://example.com/avatar/lunafox.png",
+        "avatar": "https://avatars.cloudflare.steamstatic.com/03261fa9e8d87d204df48e4f2ad00bda1b7626df_full.jpg",
         "lastMessage": "Давай в сиоф)",
         "sendedTime": "· 23 трав",
         "status": {
@@ -12,7 +12,7 @@
     {
         "name": "LunaFox",
         "online": "green",
-        "avatar": "https://example.com/avatar/lunafox.png",
+        "avatar": "https://avatars.cloudflare.steamstatic.com/8da9901d49dddff57e20e1d6d9a33bcf1f5ef783_full.jpg",
         "lastMessage": "Ха, ти бачив той стрибок?!",
         "sendedTime": "· 23 трав",
         "status": {
@@ -22,7 +22,7 @@
     {
         "name": "DarkSoul",
         "online": "none",
-        "avatar": "https://example.com/avatar/darksoul.png",
+        "avatar": "https://avatars.cloudflare.steamstatic.com/5ac7d6fb7e7a2f4a8d84bc6f3a783fedc75e3637_full.jpg",
         "lastMessage": "Пішов на базу, прикрий мене.",
         "sendedTime": "· 23 трав",
         "status": {
@@ -32,7 +32,7 @@
     {
         "name": "Kaktus",
         "online": "green",
-        "avatar": "https://example.com/avatar/kaktus.png",
+        "avatar": "https://avatars.cloudflare.steamstatic.com/1d639aaee5fb066d138277689c31f34d26c77383_full.jpg",
         "lastMessage": "Гоу в рейд о 8?",
         "sendedTime": "· 22 трав",
         "status": {
@@ -42,7 +42,7 @@
     {
         "name": "PixelManiac",
         "online": "none",
-        "avatar": "https://example.com/avatar/pixelmaniac.png",
+        "avatar": "https://avatars.cloudflare.steamstatic.com/1d639aaee5fb066d138277689c31f34d26c77383_full.jpg",
         "lastMessage": "Та ну, знову лаги :(",
         "sendedTime": "· 21 трав",
         "status": {
@@ -52,7 +52,37 @@
     {
         "name": "TeaTime",
         "online": "green",
-        "avatar": "https://example.com/avatar/teatime.png",
+        "avatar": "https://avatars.cloudflare.steamstatic.com/1d639aaee5fb066d138277689c31f34d26c77383_full.jpg",
+        "lastMessage": "Зроби скрін! Це ж легендарно!",
+        "sendedTime": "· 20 трав",
+        "status": {
+            "sendedAndReaded": true
+        }
+    },
+    {
+        "name": "Kaktus",
+        "online": "green",
+        "avatar": "https://avatars.cloudflare.steamstatic.com/1d639aaee5fb066d138277689c31f34d26c77383_full.jpg",
+        "lastMessage": "Гоу в рейд о 8?",
+        "sendedTime": "· 22 трав",
+        "status": {
+            "sended": true
+        }
+    },
+    {
+        "name": "PixelManiac",
+        "online": "none",
+        "avatar": "https://avatars.cloudflare.steamstatic.com/1d639aaee5fb066d138277689c31f34d26c77383_full.jpg",
+        "lastMessage": "Та ну, знову лаги :(",
+        "sendedTime": "· 21 трав",
+        "status": {
+            "recievedAndReaded": false
+        }
+    },
+    {
+        "name": "TeaTime",
+        "online": "green",
+        "avatar": "https://avatars.cloudflare.steamstatic.com/1d639aaee5fb066d138277689c31f34d26c77383_full.jpg",
         "lastMessage": "Зроби скрін! Це ж легендарно!",
         "sendedTime": "· 20 трав",
         "status": {
