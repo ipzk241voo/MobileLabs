@@ -1,0 +1,62 @@
+[
+    {
+        "name": "ndpower",
+        "online": "green",
+        "avatar": "https://example.com/avatar/lunafox.png",
+        "lastMessage": "Давай в сиоф)",
+        "sendedTime": "· 23 трав",
+        "status": {
+            "recieved": true
+        }
+    },
+    {
+        "name": "LunaFox",
+        "online": "green",
+        "avatar": "https://example.com/avatar/lunafox.png",
+        "lastMessage": "Ха, ти бачив той стрибок?!",
+        "sendedTime": "· 23 трав",
+        "status": {
+            "recieved": true
+        }
+    },
+    {
+        "name": "DarkSoul",
+        "online": "none",
+        "avatar": "https://example.com/avatar/darksoul.png",
+        "lastMessage": "Пішов на базу, прикрий мене.",
+        "sendedTime": "· 23 трав",
+        "status": {
+            "sendedAndReaded": true
+        }
+    },
+    {
+        "name": "Kaktus",
+        "online": "green",
+        "avatar": "https://example.com/avatar/kaktus.png",
+        "lastMessage": "Гоу в рейд о 8?",
+        "sendedTime": "· 22 трав",
+        "status": {
+            "sended": true
+        }
+    },
+    {
+        "name": "PixelManiac",
+        "online": "none",
+        "avatar": "https://example.com/avatar/pixelmaniac.png",
+        "lastMessage": "Та ну, знову лаги :(",
+        "sendedTime": "· 21 трав",
+        "status": {
+            "recievedAndReaded": false
+        }
+    },
+    {
+        "name": "TeaTime",
+        "online": "green",
+        "avatar": "https://example.com/avatar/teatime.png",
+        "lastMessage": "Зроби скрін! Це ж легендарно!",
+        "sendedTime": "· 20 трав",
+        "status": {
+            "sendedAndReaded": true
+        }
+    }
+]
