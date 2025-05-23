@@ -1,21 +1,15 @@
-import React, { useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { ThemeProvider } from "styled-components";
-import { LightTheme, DarkTheme } from "./assets/Themes";
 import MainTabs from "./components/MainTabs";
+import { ProgressProvider } from "./components/ProgressContext";
 
 const App = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const toggleTheme = () => setIsDarkMode(!isDarkMode);
-  const currentTheme = isDarkMode ? DarkTheme : LightTheme;
-
-  return (
-    <ThemeProvider theme={currentTheme}>
-      <NavigationContainer>
-        <MainTabs toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
-      </NavigationContainer>
-    </ThemeProvider>
-  );
+    return (
+        <ProgressProvider>
+            <NavigationContainer>
+                <MainTabs />
+            </NavigationContainer>
+        </ProgressProvider>
+    );
 };
 
 export default App;

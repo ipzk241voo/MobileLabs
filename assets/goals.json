@@ -1,0 +1,36 @@
+{
+    "tenclicks": {
+        "title": "Tap 10 times",
+        "subtitle": "Tap on clicker object 10 times",
+        "progressbar": 10
+    },
+    "doubletap": {
+        "title": "Double-tap 5 times",
+        "subtitle": "Double-tap on clicker 5 times",
+        "progressbar": 5
+    },
+    "longpress": {
+        "title": "Long press 3 seconds",
+        "subtitle": "Hold the clicker for 3 seconds"
+    },
+    "drag": {
+        "title": "Drag the object",
+        "subtitle": "Drag the clicker around the screen"
+    },
+    "swiperight": {
+        "title": "Swipe right",
+        "subtitle": "Perform a quick swipe right gesture"
+    },
+    "swipeleft": {
+        "title": "Swipe left",
+        "subtitle": "Perform a quick swipe left gesture"
+    },
+    "pinch": {
+        "title": "Pinch to resize",
+        "subtitle": "Use pinch gesture to resize the clicker"
+    },
+    "score100": {
+        "title": "Reach 100 points",
+        "subtitle": "Perform different gestures to gain 100 score points"
+    }
+}
