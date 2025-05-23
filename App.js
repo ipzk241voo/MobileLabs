@@ -1,39 +1,30 @@
-import React, { useEffect } from "react";
-import { StyleSheet } from "react-native";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import ToDo from "./screens/ToDo";
-import { LogLevel, OneSignal } from "react-native-onesignal";
-import Constants from "expo-constants";
+import React from "react";
+import { HomeScreen } from "./screens/HomeScreen/HomeScreen";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { NavigationContainer } from "@react-navigation/native";
+import MainStorageScreen from "./screens/MainStorage/MainStorageScreen";
+import TextEditorScreen from "./screens/TextEditor/TextEditorScreen";
 
-export default function App() {
-  const EXTERNAL_ID = "sdv-24-1";
-  const APP_ID = Constants.expoConfig.extra.oneSignalAppId;
 
-  useEffect(() => {
-    OneSignal.Debug.setLogLevel(LogLevel.Verbose);
-    OneSignal.initialize(APP_ID);
-    OneSignal.Notifications.requestPermission(true);
-
-    OneSignal.Notifications.addEventListener(
-      "foregroundWillDisplay",
-      async (event) => {
-        console.log("Notification received in foreground:", event.notification);
-        event.preventDefault();
-        event.notification.display();
-      }
+const App = () => {
+    const Stack = createNativeStackNavigator();
+    return (
+        <NavigationContainer>
+            <Stack.Navigator
+                initialRouteName="Home"
+                screenOptions={{
+                    headerStyle: { backgroundColor: "#232946" },
+                    headerTintColor: "#fff",
+                    headerTitleStyle: { fontWeight: "bold", fontSize: 22, letterSpacing: 1 },
+                    contentStyle: { backgroundColor: "#16161a" }, 
+                }}
+            >
+                <Stack.Screen name="Home" component={HomeScreen} />
+                <Stack.Screen name="MainStorage" component={MainStorageScreen} options={{ title: "Main Storage" }} />
+                <Stack.Screen name="TextEditor" component={TextEditorScreen} options={{ title: "Editor" }} />
+            </Stack.Navigator>
+        </NavigationContainer>
     );
+};
 
-    OneSignal.Notifications.addEventListener("click", async (event) => {
-      const notification = event.getNotification();
-      console.log("Notification clicked:", notification);
-    });
-
-    OneSignal.login(EXTERNAL_ID);
-    OneSignal.User.pushSubscription.optIn();
-    AsyncStorage.setItem("externalId", EXTERNAL_ID);
-  }, []);
-
-  return <ToDo />;
-}
-
-const styles = StyleSheet.create({});
+export default App;
