@@ -1,35 +1,39 @@
-import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "./screens/HomeScreen";
-import GalleryScreen from "./screens/GalleryScreen";
-import ProfileScreen from "./screens/ProfileScreen";
-import { GestureHandlerRootView } from "react-native-gesture-handler";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
+import React, { useEffect } from "react";
+import { StyleSheet } from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import ToDo from "./screens/ToDo";
+import { LogLevel, OneSignal } from "react-native-onesignal";
+import Constants from "expo-constants";
 
-const Stack = createNativeStackNavigator();
+export default function App() {
+  const EXTERNAL_ID = "sdv-24-1";
+  const APP_ID = Constants.expoConfig.extra.oneSignalAppId;
 
-const App = () => {
-  return (
-    <GestureHandlerRootView>
-      <NavigationContainer>
-        <Stack.Navigator
-          initialRouteName="Головна"
-          screenOptions={({ route, navigation }) => ({
-            header: () => (
-              <Header activeTitle={route.name} navigation={navigation} />
-            ),
-          })}
-        >
-          <Stack.Screen name="Головна" component={HomeScreen} />
-          <Stack.Screen name="Галерея" component={GalleryScreen} />
-          <Stack.Screen name="Профіль" component={ProfileScreen} />
-        </Stack.Navigator>
-        <Footer></Footer>
-      </NavigationContainer>
-    </GestureHandlerRootView>
-  );
-};
+  useEffect(() => {
+    OneSignal.Debug.setLogLevel(LogLevel.Verbose);
+    OneSignal.initialize(APP_ID);
+    OneSignal.Notifications.requestPermission(true);
 
-export default App;
+    OneSignal.Notifications.addEventListener(
+      "foregroundWillDisplay",
+      async (event) => {
+        console.log("Notification received in foreground:", event.notification);
+        event.preventDefault();
+        event.notification.display();
+      }
+    );
+
+    OneSignal.Notifications.addEventListener("click", async (event) => {
+      const notification = event.getNotification();
+      console.log("Notification clicked:", notification);
+    });
+
+    OneSignal.login(EXTERNAL_ID);
+    OneSignal.User.pushSubscription.optIn();
+    AsyncStorage.setItem("externalId", EXTERNAL_ID);
+  }, []);
+
+  return <ToDo />;
+}
+
+const styles = StyleSheet.create({});
